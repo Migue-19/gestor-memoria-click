@@ -1,0 +1,202 @@
+RQ-01 en contenedor | cpus=1.0 memoria=512m | ejecuciones=3 | 2026-11-19 23:22:23 UTC
+Maquina: 2 CPU, Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+Docker version 29.10.0, build fdd4b8e
+=== ejecucion 1 (cpus=1.0 memoria=512m) ===
+Unable to find image 'maven:3.9-eclipse-temurin-21' locally
+3.9-eclipse-temurin-21: Pulling from library/maven
+Digest: sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320
+Status: Downloaded newer image for maven:3.9-eclipse-temurin-21
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< co.uceva.click:asignador-service >------------------
+[INFO] Building asignador-service 0.1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ asignador-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ asignador-service ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 13 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ asignador-service ---
+[INFO] skip non existing resourceDirectory /work/asignador-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ asignador-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.3:test (default-test) @ asignador-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running co.uceva.click.asignador.BancoRq01
+
+=== RQ-01 desempeno: C (JNA) contra Java ===
+Estimulo: 100000 operaciones, 500 bloques, mejor ajuste, semilla 20261119
+Secuencia: huella tipo=-451748897 proc=-1507519129 tam=313293174
+Entorno: Java 21.0.12.1, amd64, 1 CPU, so Linux
+
+| corrida | C (ms)   | Java (ms) | nota |
+|---------|----------|-----------|------|
+| 1       |   110.25 |    367.89 | descartada (calentamiento) |
+| 2       |    91.95 |    252.96 | descartada (calentamiento) |
+| 3       |    97.46 |     93.54 | descartada (calentamiento) |
+| 4       |   107.01 |    197.49 | medida |
+| 5       |   112.94 |    101.41 | medida |
+| 6       |    93.31 |    236.58 | medida |
+| 7       |    91.85 |     99.49 | medida |
+| 8       |    92.02 |    102.89 | medida |
+
+Mediana de 5 corridas: C = 93.31 ms, Java = 102.89 ms
+Relacion Java / C = 1.10  (mayor que 1: C es mas rapido)
+Mismo estado final y mismas metricas: SI
+Bloques finales: 536, rechazos: 0, interna: 308 KB, externa: 20410 KB, hueco mayor: 359034 KB
+Corrida completa en menos de 1 s (C): SI
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.704 s -- in co.uceva.click.asignador.BancoRq01
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.657 s
+[INFO] Finished at: 2026-11-19T23:23:50Z
+[INFO] ------------------------------------------------------------------------
+=== ejecucion 2 (cpus=1.0 memoria=512m) ===
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< co.uceva.click:asignador-service >------------------
+[INFO] Building asignador-service 0.1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ asignador-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ asignador-service ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 13 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ asignador-service ---
+[INFO] skip non existing resourceDirectory /work/asignador-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ asignador-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.3:test (default-test) @ asignador-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running co.uceva.click.asignador.BancoRq01
+
+=== RQ-01 desempeno: C (JNA) contra Java ===
+Estimulo: 100000 operaciones, 500 bloques, mejor ajuste, semilla 20261119
+Secuencia: huella tipo=-451748897 proc=-1507519129 tam=313293174
+Entorno: Java 21.0.12.1, amd64, 1 CPU, so Linux
+
+| corrida | C (ms)   | Java (ms) | nota |
+|---------|----------|-----------|------|
+| 1       |   101.42 |    374.28 | descartada (calentamiento) |
+| 2       |    91.72 |    353.03 | descartada (calentamiento) |
+| 3       |    97.25 |    110.13 | descartada (calentamiento) |
+| 4       |   105.71 |    187.34 | medida |
+| 5       |   119.22 |     99.14 | medida |
+| 6       |    93.73 |    101.34 | medida |
+| 7       |    93.05 |    193.51 | medida |
+| 8       |   120.46 |     99.79 | medida |
+
+Mediana de 5 corridas: C = 105.71 ms, Java = 101.34 ms
+Relacion Java / C = 0.96  (mayor que 1: C es mas rapido)
+Mismo estado final y mismas metricas: SI
+Bloques finales: 536, rechazos: 0, interna: 308 KB, externa: 20410 KB, hueco mayor: 359034 KB
+Corrida completa en menos de 1 s (C): SI
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.802 s -- in co.uceva.click.asignador.BancoRq01
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.147 s
+[INFO] Finished at: 2026-11-19T23:24:12Z
+[INFO] ------------------------------------------------------------------------
+=== ejecucion 3 (cpus=1.0 memoria=512m) ===
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< co.uceva.click:asignador-service >------------------
+[INFO] Building asignador-service 0.1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ asignador-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ asignador-service ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 13 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ asignador-service ---
+[INFO] skip non existing resourceDirectory /work/asignador-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ asignador-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.3:test (default-test) @ asignador-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running co.uceva.click.asignador.BancoRq01
+
+=== RQ-01 desempeno: C (JNA) contra Java ===
+Estimulo: 100000 operaciones, 500 bloques, mejor ajuste, semilla 20261119
+Secuencia: huella tipo=-451748897 proc=-1507519129 tam=313293174
+Entorno: Java 21.0.12.1, amd64, 1 CPU, so Linux
+
+| corrida | C (ms)   | Java (ms) | nota |
+|---------|----------|-----------|------|
+| 1       |   103.83 |    327.44 | descartada (calentamiento) |
+| 2       |    94.82 |    277.78 | descartada (calentamiento) |
+| 3       |    94.56 |    252.58 | descartada (calentamiento) |
+| 4       |   105.92 |     93.45 | medida |
+| 5       |    91.56 |    195.05 | medida |
+| 6       |   112.46 |    106.90 | medida |
+| 7       |    91.95 |    198.38 | medida |
+| 8       |   121.24 |    102.10 | medida |
+
+Mediana de 5 corridas: C = 105.92 ms, Java = 106.90 ms
+Relacion Java / C = 1.01  (mayor que 1: C es mas rapido)
+Mismo estado final y mismas metricas: SI
+Bloques finales: 536, rechazos: 0, interna: 308 KB, externa: 20410 KB, hueco mayor: 359034 KB
+Corrida completa en menos de 1 s (C): SI
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.880 s -- in co.uceva.click.asignador.BancoRq01
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.043 s
+[INFO] Finished at: 2026-11-19T23:24:33Z
+[INFO] ------------------------------------------------------------------------
