@@ -1,0 +1,4 @@
+.git
+**/target
+c/*.so
+c/test_memoria
